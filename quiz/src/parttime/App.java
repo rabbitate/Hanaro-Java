@@ -22,7 +22,7 @@
 //        출력 예시
 //        enjoy!
 
-package assignment.quiz.parttime;
+package parttime;
 
 import java.util.Scanner;
 

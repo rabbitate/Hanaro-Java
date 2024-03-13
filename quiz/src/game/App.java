@@ -19,7 +19,7 @@
 //만약 3, 6, 9 가 들어간 수를 불러야 하는 상황이라면, 그 수대신 "박수" 등을 친다.
 //예를 들어 33 까지 진행했다면? "짝짝"과 같이 박수를 두번 치는 형식이다.
 
-package assignment.quiz.game;
+package game;
 
 import java.util.Scanner;
 

@@ -12,7 +12,7 @@
 //        출력 예)
 //        15 15(중복발생! 재추첨) 37 29 42 22 8
 
-package assignment.quiz.lottery;
+package lottery;
 
 import java.util.Random;
 
