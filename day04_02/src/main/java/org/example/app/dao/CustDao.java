@@ -22,7 +22,7 @@ public class CustDao implements Dao<String, CustDto> {
 
     @Override
     public int update(CustDto custDto) {
-        System.out.println("Oracle DB:Updated ... "+custDto);
+        System.out.println("Oracle DB:Updated ... " + custDto);
         return 0;
     }
 

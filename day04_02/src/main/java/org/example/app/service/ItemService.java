@@ -16,26 +16,29 @@ public class ItemService implements Service<String, ItemDto> {
 
     @Override
     public int add(ItemDto itemDto) {
+        dao.insert(itemDto);
         return 0;
     }
 
     @Override
     public int del(String s) {
+        dao.delete(s);
         return 0;
     }
 
     @Override
     public int modify(ItemDto itemDto) {
+        dao.update(itemDto);
         return 0;
     }
 
     @Override
     public ItemDto get(String s) {
-        return null;
+        return dao.select(s);
     }
 
     @Override
     public List<ItemDto> get() {
-        return null;
+        return dao.select();
     }
 }
