@@ -19,17 +19,39 @@
 //만약 3, 6, 9 가 들어간 수를 불러야 하는 상황이라면, 그 수대신 "박수" 등을 친다.
 //예를 들어 33 까지 진행했다면? "짝짝"과 같이 박수를 두번 치는 형식이다.
 
-package game;
+package game369;
 
 import java.util.Scanner;
 
 public class App {
+    public static String printNum(int num) {
+        String result = "";
+        int xCount = 0; // X 개수
+        while (num > 0) {
+            int n = num % 10;
+            // 자릿수가 3, 6, 9 일때
+            if(n == 3 || n == 6 || n == 9) {
+                xCount++;
+            } else {
+                result = n + result;
+            }
+            num /= 10;
+        }
+
+        if(xCount != 0) {
+            result = "";
+            for(int i = 0; i < xCount; i++) {
+                result += "X";
+            }
+        }
+        return result;
+    }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("369 게임입니다. 숫자를 입력하세요: ");
         int num = scanner.nextInt();
         for(int i = 1; i <= num; i++) {
-
+            System.out.print(printNum(i) + " ");
         }
     }
 }

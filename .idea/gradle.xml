@@ -13,6 +13,25 @@
           </set>
         </option>
       </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="delegatedBuild" value="false" />
+        <option name="testRunner" value="PLATFORM" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/day05" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/day05" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/day05_02" />
+        <option name="gradleHome" value="" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/day05_02" />
+          </set>
+        </option>
+      </GradleProjectSettings>
     </option>
   </component>
 </project>
