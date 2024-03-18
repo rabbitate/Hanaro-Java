@@ -2,6 +2,7 @@ package com.hana.jdbc;
 
 import java.sql.*;
 
+// SELECT * FROM db_cust
 public class Jdbc2 {
     public static void main(String[] args) {
         // 1. Driver Loading
@@ -38,6 +39,7 @@ public class Jdbc2 {
 
             // 5. 결과 출력
             while (resultSet.next()) {
+                System.out.println(resultSet.next());
                 String custId = resultSet.getString("id");
                 String custIPwd = resultSet.getString("pwd");
                 String custName = resultSet.getString("name");
@@ -54,6 +56,7 @@ public class Jdbc2 {
                     throw new RuntimeException(e);
                 }
             }
+
             if(preparedStatement != null) {
                 try {
                     preparedStatement.close();
@@ -61,6 +64,7 @@ public class Jdbc2 {
                     throw new RuntimeException(e);
                 }
             }
+
             if(connection != null) {
                 try {
                     connection.close();

@@ -9,7 +9,7 @@ public class Graph {
 
         for(Shape shape:shapes){
             System.out.println(shape.getArea());
-            if(shape instanceof  Circle){
+            if(shape instanceof Circle){
                 Circle c = (Circle) shape;
                 System.out.println(c.getRadius());
             }

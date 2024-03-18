@@ -26,8 +26,6 @@
 
 package game369withcom;
 
-import com.sun.tools.jconsole.JConsoleContext;
-
 import java.util.Scanner;
 
 public class App {
@@ -40,18 +38,20 @@ public class App {
             if(n == 3 || n == 6 || n == 9) {
                 xCount++;
             } else {
-                result += n;
+                result = n + result;
             }
             num /= 10;
         }
 
         if(xCount == 0) {
-            System.out.println(Integer.toString(num));
-            return Integer.toString(num);
+//            System.out.println(result);
+            return result;
         } else {
+            result = "";
             for(int i = 0; i < xCount; i++) {
                 result += "X";
             }
+//            System.out.println(result);
             return result;
         }
     }
@@ -62,11 +62,10 @@ public class App {
         boolean playerWins = true; // 플레이어 승리 여부
         for(int i = 1; i <= input; i++) {
             if(i % 2 == 1) {
-                System.out.println("컴퓨터: " + i);
+                System.out.println("컴퓨터: " + findAns(i));
             } else {
                 System.out.print("나: ");
                   String player = scanner.next();
-                System.out.println("");
                 // 사용자가 순서에 맞는 숫자를 입력하지 않거나 답이 틀렸을 경우
                 if (!player.equals(findAns(i))) {
                     playerWins = false;

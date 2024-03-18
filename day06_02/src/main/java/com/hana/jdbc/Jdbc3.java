@@ -2,6 +2,7 @@ package com.hana.jdbc;
 
 import java.sql.*;
 
+// SELECT * FROM db_cust WHERE id = ?
 public class Jdbc3 {
     public static void main(String[] args) {
         // 1. Driver Loading
@@ -53,6 +54,7 @@ public class Jdbc3 {
                     throw new RuntimeException(e);
                 }
             }
+
             if(preparedStatement != null) {
                 try {
                     preparedStatement.close();
@@ -60,6 +62,7 @@ public class Jdbc3 {
                     throw new RuntimeException(e);
                 }
             }
+
             if(connection != null) {
                 try {
                     connection.close();
